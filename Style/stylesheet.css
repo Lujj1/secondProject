@@ -1,0 +1,553 @@
+*{
+   padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    transform-style: preserve-3d;
+    width: 80%;
+    margin: auto
+}
+
+h2{
+    font-family: "Rouge Script", cursive;
+    font-weight: 600;
+}
+p{
+    font-family: "Playfair Display", serif;
+}
+
+/* ///////////////////////////////////////////////// */
+
+.container{
+    margin: auto;
+    height: 200px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+.content img{
+    height: 250px;
+    width: 250px;
+}
+
+.headerLinks li {
+display: inline-block;
+margin-right: 15px;
+}
+
+.headerLinks a{ 
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    font-family: "Rouge Script", cursive;
+    font-weight: 550;
+    color: black;
+}
+
+.list{
+    position: relative;
+}
+
+.weddingmenu{
+    position: relative;
+}
+
+.weddingmenu::after{
+    content: "";
+    position: absolute;
+    border-width: 2px 0;
+   height: 90%;
+   width: 100%;
+   transform: scale3d(0,1,1);
+   border-style: solid;
+   border-color: rgb(202, 195, 177);
+   top: 0;
+   left: 0;
+   transition: 0.3s;
+   transform-origin: left;
+}
+
+.weddingmenu::before{
+    content: "";
+    position: absolute;
+    height: 95%;
+    width: 100%;
+    border-width: 0 2px;
+    border-style: solid;
+    border-color: rgb(202, 195, 177);
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    transform: scale3d(1,0,1);
+}
+
+.weddingmenu:hover::after,.weddingmenu:hover::before{
+  transform: scale3d(1,1,1);
+}
+
+.listmenu{
+    position: absolute;
+    width: 450px;
+    border: 2px solid rgb(202, 195, 177);
+    background-color: #fff;
+    margin-top: 10px;
+    transition: transform 0.5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+ 
+sub{
+    background-color:rgb(202, 195, 177) ;
+    border-radius: 10px;
+}
+
+.weddingmenu:hover + .listmenu{
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+}
+
+.listContent{
+    display: table-cell;
+    text-align: left;
+    padding: 10px;
+}
+
+.listContent ul li{
+display: inline-block;
+}
+
+.listContent ul li a{
+    font-size: 10px;
+}
+
+
+.listContent span{
+    padding: 5px;
+    width: 5px;
+    height: 1px;
+    color: rgb(202, 195, 177);
+}
+
+.iconsHeader{
+    text-align: right;
+    font-weight: bold;
+
+}
+.iconsHeader p{
+display: inline-block;
+font-size: 17px;
+font-family: "Rouge Script", cursive;
+font-weight: 550;
+}
+
+.iconsHeader i{
+    font-size: 20px;
+    color: black;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+.container2{
+   height: 80vh;
+position: relative;
+}
+
+.container2 img{
+position: absolute;
+width: 100%;
+height: 500px;
+border-radius: 10px;
+}
+
+.cont2Content{
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    padding: 20px;
+
+}
+
+.cont2Content h2{
+    font-size: 50px;
+    color: beige;
+    text-shadow: 2px 2px 2px rgb(71, 69, 69);
+}
+
+.cont2Content button{
+    width: 120px;
+    height: 35px;
+    border-radius: 10px 0 10px;
+    font-size: 14px;
+    margin-top: 20px;
+    border:rgb(0, 0, 0);
+    font-family: "Playfair Display", serif;
+    cursor: pointer;
+    background-color: #ebe6e0;
+}
+
+/* <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ --> */
+
+
+
+.secHeader{
+    text-align: center;
+    top: 10%;
+
+}
+
+.secHeader h2{
+    font-size: 50px;
+    margin-bottom: 9px;
+    margin-top: 6px;
+ }
+
+ .headerline{
+    position: relative;
+    width: 60px;
+    display: block;
+    height: 2px;
+    background-color: rgb(202, 195, 177);
+    margin: 0 auto 70px auto;
+    transition: width 0.3s ease;
+}
+
+
+.secHeader:hover .headerline{
+    width: 150px;
+} 
+
+
+.gridScn{
+    display: grid;
+    grid-template-columns: repeat(4,23.5%);
+    grid-template-rows: auto;
+    gap: 2%;
+}
+.g1 i{
+    cursor: pointer;
+}
+.g1 img{
+    width: 286px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.g1 h2{
+    font-size: 30px;
+    display: inline-block;
+}
+.gg i{
+    visibility: hidden;
+    color:rgb(202, 195, 177) ;
+}
+
+.gg:hover i{
+    visibility: visible;
+}
+
+
+.g2 i{
+    visibility: hidden;
+    color:rgb(202, 195, 177) ;
+
+}
+
+.g2:hover i{
+    visibility: visible;
+}
+.g3 i{
+    visibility: hidden;
+    color:rgb(202, 195, 177) ;
+}
+
+.g3:hover i{
+    visibility: visible;
+}
+.g4 i{
+    visibility: hidden;
+    color:rgb(202, 195, 177) ;
+}
+
+.g4:hover i{
+    visibility: visible;
+}
+
+.g1 p{
+    margin-top: 20px;
+    color: rgb(202, 195, 177);
+}
+
+
+.g5{
+    grid-column:1/3;
+    background-color:rgb(221, 217, 206) ;
+    height: 300px;
+    border-radius: 10px;
+position: relative;
+}
+
+.g5 i{
+    visibility: visible;
+    font-size: 80px ;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.g5 p{
+    color: black;
+    font-size: 17px;
+    margin-top: 15px;
+    line-height: 35px;
+    margin-left: 10px;
+    text-shadow: 1px 1px 1px rgb(152, 143, 143) ;
+}
+
+.g5 span{
+    display: block;
+}
+
+.g5info{
+position: absolute;
+top: 20;
+left: 90;
+}
+
+.g5 h3{
+    height: 2px;
+    width: 65px;
+    display: inline-block;
+    background-color: #000;
+    position: relative;
+    margin-top: 35px;
+    margin-right: 8px;
+    transform: translate(350px,0);
+}
+
+
+.g6{
+    grid-row: 2;
+}
+
+.overlay{
+    position: absolute;
+    background-color:rgba(144, 140, 131,0.5) ;
+  width: 100%;
+  height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.g7 img {
+height: 300px;
+}
+
+.g7{
+position: relative;
+transform: scale(1,1);
+transition: 0.5s;
+z-index: 1;
+}
+
+.g7:hover{
+    transform: scale(1.1,1.1) ;
+}
+
+.g7Content{
+    position: absolute;
+    top: 0;
+    left: 15;
+    z-index: 100;
+}
+
+/* ///////////////////////////////////// */
+
+.secondscn{
+    position: relative;
+    width: 100%;
+    height: 70px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+margin-top: 70px;
+margin-bottom: 60px;
+}
+
+.secondinfo{
+    width: 20%;
+    height: 100px;
+    text-align: center;
+}
+
+.secondscn h3{
+    height: 70px;
+    width: 1px;
+    background-color:rgb(221, 217, 206) ;
+}
+
+
+.scndicon{
+    position: relative;
+width: 100%;
+height: 60px;
+    overflow: hidden;
+}
+
+.icon1{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+color: grey;
+font-size: 30px;
+transition: 1s;
+}
+
+
+.scndicon:hover .icon1{
+top: -150%;
+}
+
+.scndicon:hover .icon2{
+    top: 50%;
+    }
+
+.icon2{
+color:rgb(221, 217, 206) ;
+font-size: 30px;
+position: absolute;
+top: 150%;
+left: 50%;
+transform: translate(-50%,-50%);
+transition: 1s
+}
+
+h4{
+    margin-top: 20px;
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(221, 217, 206) ;
+}
+
+/* /////////////////////////////////////// */
+
+.ThirdScn{
+position: relative;
+width: 100%;
+}
+
+.thirdInfo{
+    text-align: center;
+}
+
+.thirdInfo h2{
+font-size: 40px;
+margin-top: 20px;
+}
+
+.thirdInfo h5{
+    position: relative;
+    width: 60px;
+    display: block;
+    height: 2px;
+    margin: 0 auto 30px auto;
+    transition: width 0.3s ease;
+    background-color: rgb(221, 217, 206);
+}
+
+.thirdInfo:hover h5{
+    width: 150px;
+}
+
+.thirdInfo span{
+    margin: 15px;
+    margin-bottom: 50px;
+}
+
+.grid2Scn{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,23.5%);
+    grid-template-rows: auto;
+    column-gap: 14%;  
+    row-gap: 2%;
+}
+
+.grid2Scn i{
+    color: rgb(159, 150, 126);
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.grid2Scn p{
+font-size: 15px;    
+}
+
+.g1-2 img, .g2-2 img, .g3-2 img, .g4-2 img, .g5-2 img , .g6-2 img{
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.g1-2 , .g2-2 , .g3-2 , .g4-2 , .g5-2 , .g6-2{
+    position: relative;
+}
+
+.gridicons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 450px;
+    z-index: 5;
+    text-align: center;
+}
+
+.gridicons img{
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   transform: rotateY(90deg);
+   transition: transform 0.5s ease , opacity 0.5s ease;
+}
+
+.gridicons:hover img{
+    transform: rotateY(0deg);
+   opacity: 0.7;
+}
+
+.gridicons2 {
+position: absolute;
+top: 50%;
+left:50%;
+transform: translate(-50%,-50%);
+}
+
+.gridicons i{
+    position: relative;
+    top: 0;
+    transform: translate(0,-50%);
+    font-size: 40px;
+    transition: transform 0.5s ease;
+    transform: rotateY(90deg);
+}
+
+.gridicons:hover i{
+    opacity: 1;
+    transform: rotateY(0deg);
+ }
+
+
+
